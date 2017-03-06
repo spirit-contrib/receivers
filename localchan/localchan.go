@@ -107,6 +107,8 @@ func (p *LocalChan) Start() {
 		return
 	}
 
+	p.isRunning = true
+
 	go func() {
 		lastStatUpdated := time.Now()
 		statUpdateFunc := func() {
